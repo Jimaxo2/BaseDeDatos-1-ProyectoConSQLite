@@ -1,0 +1,80 @@
+﻿namespace BaseDeDatos_SQLLite.Panels.Filters
+{
+    partial class aFiltroUltimaFecha
+    {
+        /// <summary> 
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de componentes
+
+        /// <summary> 
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            mcCalendario = new MonthCalendar();
+            label1 = new Label();
+            btnBuscar = new Button();
+            SuspendLayout();
+            // 
+            // mcCalendario
+            // 
+            mcCalendario.Location = new Point(72, 59);
+            mcCalendario.Name = "mcCalendario";
+            mcCalendario.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(72, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(136, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Ingrese la fecha a buscar";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(152, 233);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(75, 23);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // aFiltroUltimaFecha
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnBuscar);
+            Controls.Add(label1);
+            Controls.Add(mcCalendario);
+            Name = "aFiltroUltimaFecha";
+            Size = new Size(400, 291);
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private MonthCalendar mcCalendario;
+        private Label label1;
+        private Button btnBuscar;
+    }
+}
