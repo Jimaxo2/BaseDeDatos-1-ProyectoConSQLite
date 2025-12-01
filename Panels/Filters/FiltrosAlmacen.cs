@@ -26,13 +26,10 @@ namespace BaseDeDatos_SQLLite.Panels.Filters
         {
             pFiltros.Controls.Clear();
 
-            // Crear instancia del panel Login
             aFiltroPorId filtro = new aFiltroPorId(dt);
 
-            // Para que ocupe todo el espacio
             filtro.Dock = DockStyle.Fill;
 
-            // Agregarlo al panel contenedor
             pFiltros.Controls.Add(filtro);
         }
 
@@ -40,13 +37,10 @@ namespace BaseDeDatos_SQLLite.Panels.Filters
         {
             pFiltros.Controls.Clear();
 
-            // Crear instancia del panel Login
             aFiltroPorNombre filtro = new aFiltroPorNombre(dt);
 
-            // Para que ocupe todo el espacio
             filtro.Dock = DockStyle.Fill;
 
-            // Agregarlo al panel contenedor
             pFiltros.Controls.Add(filtro);
         }
 
@@ -54,13 +48,10 @@ namespace BaseDeDatos_SQLLite.Panels.Filters
         {
             pFiltros.Controls.Clear();
 
-            // Crear instancia del panel Login
             aFiltroUltimaFecha filtro = new aFiltroUltimaFecha(dt);
 
-            // Para que ocupe todo el espacio
             filtro.Dock = DockStyle.Fill;
 
-            // Agregarlo al panel contenedor
             pFiltros.Controls.Add(filtro);
         }
 
@@ -68,13 +59,10 @@ namespace BaseDeDatos_SQLLite.Panels.Filters
         {
             pFiltros.Controls.Clear();
 
-            // Crear instancia del panel Login
             aFiltroUltimoUsuario filtro = new aFiltroUltimoUsuario(dt);
 
-            // Para que ocupe todo el espacio
             filtro.Dock = DockStyle.Fill;
 
-            // Agregarlo al panel contenedor
             pFiltros.Controls.Add(filtro);
         }
 
@@ -82,13 +70,10 @@ namespace BaseDeDatos_SQLLite.Panels.Filters
         {
             pFiltros.Controls.Clear();
 
-            // Crear instancia del panel Login
             aFiltroFechaCreado filtro = new aFiltroFechaCreado(dt);
 
-            // Para que ocupe todo el espacio
             filtro.Dock = DockStyle.Fill;
 
-            // Agregarlo al panel contenedor
             pFiltros.Controls.Add(filtro);
         }
     }
