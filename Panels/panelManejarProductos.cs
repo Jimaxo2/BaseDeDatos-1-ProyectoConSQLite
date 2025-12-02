@@ -40,7 +40,7 @@ namespace BaseDeDatos_SQLLite.Panels
             string cb_consulta = "SELECT departamento FROM productos GROUP BY departamento";
             cbCategorias.DataSource = DBConexion.obtenerTabla(cb_consulta);
             cbCategorias.DisplayMember = "departamento";
-
+            
             // Cargar almacenes
             string consulta = "SELECT id, nombre FROM almacenes";
             DataTable dt = new DataTable();
@@ -50,6 +50,7 @@ namespace BaseDeDatos_SQLLite.Panels
             cbAlmacenes.DisplayMember = "nombre";
             if (Producto != null)
             {
+                cbCategorias.Text = Producto.departamento;
                 cbAlmacenes.SelectedValue = Producto.almacen;
             }
         }
