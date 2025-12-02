@@ -35,6 +35,7 @@
             pictureBox2 = new PictureBox();
             label2 = new Label();
             labelUsuarioActivo = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 13F);
-            label1.Location = new Point(357, 481);
+            label1.Location = new Point(381, 462);
             label1.Name = "label1";
             label1.Size = new Size(245, 25);
             label1.TabIndex = 0;
@@ -55,7 +56,7 @@
             // 
             pictureBox1.Image = Properties.Resources.UnisonLogo;
             pictureBox1.ImageLocation = "";
-            pictureBox1.Location = new Point(332, 125);
+            pictureBox1.Location = new Point(356, 126);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(297, 277);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -106,16 +107,29 @@
             // 
             labelUsuarioActivo.AutoSize = true;
             labelUsuarioActivo.Font = new Font("Segoe UI", 13F);
-            labelUsuarioActivo.Location = new Point(357, 434);
+            labelUsuarioActivo.Location = new Point(415, 425);
             labelUsuarioActivo.Name = "labelUsuarioActivo";
+            labelUsuarioActivo.RightToLeft = RightToLeft.No;
             labelUsuarioActivo.Size = new Size(133, 25);
             labelUsuarioActivo.TabIndex = 8;
             labelUsuarioActivo.Text = "Usuario activo: ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13F);
+            label3.Location = new Point(366, 498);
+            label3.Name = "label3";
+            label3.Size = new Size(276, 25);
+            label3.TabIndex = 9;
+            label3.Text = "Manejador de prooductos básico";
+            label3.TextAlign = ContentAlignment.TopCenter;
             // 
             // panelInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label3);
             Controls.Add(labelUsuarioActivo);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
@@ -140,5 +154,6 @@
         private PictureBox pictureBox2;
         private Label label2;
         private Label labelUsuarioActivo;
+        private Label label3;
     }
 }

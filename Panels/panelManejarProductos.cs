@@ -36,6 +36,12 @@ namespace BaseDeDatos_SQLLite.Panels
 
         private void panelManejarProductos_Load(object sender, EventArgs e)
         {
+            // Cargar categorias
+            string cb_consulta = "SELECT departamento FROM productos GROUP BY departamento";
+            cbCategorias.DataSource = DBConexion.obtenerTabla(cb_consulta);
+            cbCategorias.DisplayMember = "departamento";
+
+            // Cargar almacenes
             string consulta = "SELECT id, nombre FROM almacenes";
             DataTable dt = new DataTable();
             dt = DBConexion.obtenerTabla(consulta);
@@ -71,7 +77,8 @@ namespace BaseDeDatos_SQLLite.Panels
                 int.Parse(txtCantidad.Text);
                 double.Parse(txtPrecio.Text);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Formato de numero incorrecto en precio o cantidad\n" + ex.Message);
                 return;
             }
@@ -143,6 +150,21 @@ namespace BaseDeDatos_SQLLite.Panels
             this.Controls.Add(p);
 
             this.Text = "Administrar productos";
+        }
+
+        private void ckbCategoria_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbCategoria.Checked)
+            {
+                txtDepartamento.ReadOnly = false;
+                cbCategorias.Enabled = false;
+            }
+            else
+            {
+                txtDepartamento.Text = "";
+                txtDepartamento.ReadOnly = true;
+                cbCategorias.Enabled = true;
+            }
         }
     }
 }

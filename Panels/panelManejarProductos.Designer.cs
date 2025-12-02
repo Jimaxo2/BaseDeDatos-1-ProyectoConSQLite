@@ -42,12 +42,14 @@
             btnCancelar = new Button();
             label1 = new Label();
             txtID = new TextBox();
+            ckbCategoria = new CheckBox();
+            cbCategorias = new ComboBox();
             SuspendLayout();
             // 
             // cbAlmacenes
             // 
             cbAlmacenes.FormattingEnabled = true;
-            cbAlmacenes.Location = new Point(122, 268);
+            cbAlmacenes.Location = new Point(122, 287);
             cbAlmacenes.Name = "cbAlmacenes";
             cbAlmacenes.Size = new Size(133, 23);
             cbAlmacenes.TabIndex = 25;
@@ -55,7 +57,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(52, 271);
+            label6.Location = new Point(52, 290);
             label6.Name = "label6";
             label6.Size = new Size(57, 15);
             label6.TabIndex = 24;
@@ -63,9 +65,10 @@
             // 
             // txtDepartamento
             // 
-            txtDepartamento.Location = new Point(122, 225);
+            txtDepartamento.Location = new Point(249, 229);
             txtDepartamento.Name = "txtDepartamento";
-            txtDepartamento.Size = new Size(276, 23);
+            txtDepartamento.ReadOnly = true;
+            txtDepartamento.Size = new Size(167, 23);
             txtDepartamento.TabIndex = 23;
             // 
             // label5
@@ -162,10 +165,31 @@
             txtID.Size = new Size(100, 23);
             txtID.TabIndex = 29;
             // 
+            // ckbCategoria
+            // 
+            ckbCategoria.AutoSize = true;
+            ckbCategoria.Location = new Point(124, 258);
+            ckbCategoria.Name = "ckbCategoria";
+            ckbCategoria.Size = new Size(101, 19);
+            ckbCategoria.TabIndex = 30;
+            ckbCategoria.Text = "Otra categoria";
+            ckbCategoria.UseVisualStyleBackColor = true;
+            ckbCategoria.CheckedChanged += ckbCategoria_CheckedChanged;
+            // 
+            // cbCategorias
+            // 
+            cbCategorias.FormattingEnabled = true;
+            cbCategorias.Location = new Point(122, 229);
+            cbCategorias.Name = "cbCategorias";
+            cbCategorias.Size = new Size(121, 23);
+            cbCategorias.TabIndex = 31;
+            // 
             // panelManejarProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(cbCategorias);
+            Controls.Add(ckbCategoria);
             Controls.Add(txtID);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
@@ -203,5 +227,7 @@
         private Button btnCancelar;
         private Label label1;
         private TextBox txtID;
+        private CheckBox ckbCategoria;
+        private ComboBox cbCategorias;
     }
 }
