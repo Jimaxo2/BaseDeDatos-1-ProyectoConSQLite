@@ -14,10 +14,8 @@ namespace BaseDeDatos_SQLLite
         // Evento que se dispara unicamente cuando el login es exitoso
         private void LoginExitoso(usuario Usuario)
         {
-            // Guardas el usuario en el Form
             this.Usuario = Usuario;
 
-            // Luego puedes cambiar de vista
             pDisplay.Controls.Clear();
 
             panelInicio inicio = new panelInicio(Usuario);
@@ -25,7 +23,6 @@ namespace BaseDeDatos_SQLLite
 
             pDisplay.Controls.Add(inicio);
 
-            // Opcional: habilitar cosas del Form
             toolStrip1.Enabled = true;
             toolStrip1.Visible = true;
         }
