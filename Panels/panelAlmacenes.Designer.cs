@@ -50,6 +50,7 @@
             // 
             dgvAlmacenes.AllowUserToAddRows = false;
             dgvAlmacenes.AllowUserToDeleteRows = false;
+            dgvAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAlmacenes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAlmacenes.Location = new Point(15, 102);
             dgvAlmacenes.MultiSelect = false;

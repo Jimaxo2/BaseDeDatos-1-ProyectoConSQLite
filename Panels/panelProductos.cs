@@ -53,7 +53,6 @@ namespace BaseDeDatos_SQLLite.Panels
             DataTable dt = new DataTable();
             dt = DBConexion.obtenerTabla(consulta);
             dgvProductos.DataSource = dt;
-            dgvProductos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
         private void Productos_Load(object sender, EventArgs e)

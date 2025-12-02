@@ -27,7 +27,7 @@ namespace BaseDeDatos_SQLLite.Panels
             DataTable dt = new DataTable();
             dt = DBConexion.obtenerTabla(consulta);
             dgvAlmacenes.DataSource = dt;
-            dgvAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dgvAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAlmacenes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
 
