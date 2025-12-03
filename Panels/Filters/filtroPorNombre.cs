@@ -26,8 +26,6 @@ namespace BaseDeDatos_SQLLite.Panels.Filtros
         {
             filtro.Add($"p.nombre LIKE '%{txtNombreProducto.Text}%' ");
             Filtrar?.Invoke();
-            //consulta += $@"p.nombre LIKE '%{txtNombreProducto.Text}%' ";
-            //dt.DataSource = DBConexion.obtenerTabla(consulta);
         }
     }
 }

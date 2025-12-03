@@ -69,11 +69,12 @@ namespace BaseDeDatos_SQLLite.Panels
                     MessageBox.Show("El nombre no puede estar vacio");
                     return;
                 }
-                if (txtDepartamento.Text == null || txtDepartamento.Text == "")
+                if (txtDepartamento.Text == null || txtDepartamento.Text == "" && !txtDepartamento.ReadOnly)
                 {
                     MessageBox.Show("La categoria no puede estar vacia");
                     return;
                 }
+                txtDepartamento.Text = cbCategorias.Text;
                 int.Parse(txtPrecio.Text);
                 int.Parse(txtCantidad.Text);
                 double.Parse(txtPrecio.Text);
