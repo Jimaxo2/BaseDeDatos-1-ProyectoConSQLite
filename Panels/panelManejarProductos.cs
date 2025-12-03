@@ -74,7 +74,12 @@ namespace BaseDeDatos_SQLLite.Panels
                     MessageBox.Show("La categoria no puede estar vacia");
                     return;
                 }
-                txtDepartamento.Text = cbCategorias.Text;
+
+                if (cbCategorias.Enabled)
+                {
+                    txtDepartamento.Text = cbCategorias.Text;
+                }
+                
                 int.Parse(txtPrecio.Text);
                 int.Parse(txtCantidad.Text);
                 double.Parse(txtPrecio.Text);
